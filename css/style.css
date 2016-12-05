@@ -750,6 +750,7 @@ a.view-more:focus {
     width: 146px;
     right: 0;
     bottom: 45px;
+    z-index: 9999;
 }
 
 /* - Featured - */
@@ -2054,12 +2055,6 @@ a.add-cart:focus {
         width: 56.25%;
     }
     
-    /* --- Footer --- */
-    .footer-socmed{
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-    
 }
 @media screen and (max-width:991px){
     .insta-container{
@@ -2184,7 +2179,8 @@ a.add-cart:focus {
         top: 5px;
     }
     
-    /* Homepage */
+    /* --- Homepage --- */
+    /* Header */
     .home-banner .carousel-caption{
         width: 750px;
         padding-left: 15px;
@@ -2199,6 +2195,10 @@ a.add-cart:focus {
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    .home-banner .carousel-caption{
+        top: 0;
+    }
+    
     .featured-box{
         width: 75%;
     }
@@ -2219,6 +2219,12 @@ a.add-cart:focus {
     .view-more{
         font-size: 14px;
         line-height: 14px;
+    }
+    .home-banner .slider-caption{
+        width: 40%;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 15px;
     }
     
     /* Collection */
@@ -2455,7 +2461,7 @@ a.add-cart:focus {
         margin-right: auto;
     }
     
-    /* Footer */
+    /* --- Footer --- */
     .bm-footer .footer-caption{
         width: 100%;
     }
@@ -2480,19 +2486,13 @@ a.add-cart:focus {
         margin-left: 0;
         margin-right: 0;
     }
+    .footer-socmed{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
     
 }
 @media screen and (max-width:800px){
-    .home-banner .slider-caption{
-        width: 40%;
-        font-size: 18px;
-        line-height: 28px;
-        margin-bottom: 15px;
-    }
-    .home-banner .carousel-caption{
-        top: 0;
-    }
-    
     /* Product Detail */
     .product-detail-slider{
         padding-left: 0;
@@ -2522,6 +2522,10 @@ a.add-cart:focus {
         padding-left: 15px;
         padding-right: 15px;
     }
+    .co-socmed{
+        margin-left: 0;
+        margin-right: 0;
+    }
     .co-caption .caption-item{
         width: 100%;
         float: none;
@@ -2529,6 +2533,8 @@ a.add-cart:focus {
     }
     .bmicon.bmicon-home{
         display: block;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 10px;
     }
     .container.co-box-container{
@@ -2536,6 +2542,9 @@ a.add-cart:focus {
     }
     
     /* --- Type 3 Coming Soon Style --- */
+    .caption-item p{
+        text-align: center;
+    }
     .co-type-3 .co-box-container{
         padding-top: 60px;
     }
@@ -2596,8 +2605,14 @@ a.add-cart:focus {
     .featured-box{
         width: 100%;
     }
+    .featured .panel{
+        width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .featured-box .back-box{
-        display: none;
+        top: -35px;
+        right: 0;
     }
     .featured-right .featured-box .featured-pict{
         left: 0;
@@ -2608,19 +2623,16 @@ a.add-cart:focus {
         margin-left: auto;
         margin-right: auto;
     }
-    .featured-box .featured-caption{
-        padding-top: 15px;
-        padding-bottom: 15px;
-        text-align: center;
-        top: auto;
-        background: rgba(255, 255, 255, 0.75);
-    }
     .featured-right .featured-box{
         margin-top: 0;
     }
     .featured-right .featured-box .featured-caption{
         left: 0;
-        text-align: center;
+        text-align: right;
+    }
+    .featured-right .featured-box .back-box {
+        right: auto;
+        left: 0;
     }
     .insta-pict .insta-item{
         width: auto;
@@ -2711,8 +2723,19 @@ a.add-cart:focus {
     }
 }
 @media screen and (max-width:640px){
+    /* --- Homepage --- */
     .home-banner .slider-caption{
         display: none;
+    }
+    .featured-box .featured-pict{
+        width: 380px;
+    }
+    .featured-box .back-box{
+        width: 380px;
+        height: 224px;
+    }
+    .featured .panel{
+        width: 490px;
     }
     
     /* --- Collection --- */
@@ -2725,10 +2748,11 @@ a.add-cart:focus {
         line-height: 16px;
     }
     .collection-single .cs-preview{
-        width: 100%;
+/*        width: 100%;*/
     }
     .cd-right .cd-caption,
     .collection-single .cs-caption{
+/*
         right: 0;
         left: 0;
         top: auto;
@@ -2736,12 +2760,13 @@ a.add-cart:focus {
         padding-bottom: 20px;
         text-align: center;
         background: rgba(255, 255, 255, 0.75);
+*/
     }
     .caption-link{
-        text-align: center;
+/*        text-align: center;*/
     }
     .page-2 .collection-single .cs-caption{
-        right: 0;
+/*        right: 0;*/
     }
     .cs-caption .caption-name{
         font-size: 16px;
@@ -2755,6 +2780,7 @@ a.add-cart:focus {
     .caption-separator{
         display: block;
         margin-bottom: 15px;
+        margin-left: 0;
     }
     .cd-right .cd-caption{
         text-align: left;
@@ -2771,7 +2797,7 @@ a.add-cart:focus {
         margin-top: 0;
     }
     .slider-collection .item-image{
-        width: 100%;
+/*        width: 100%;*/
     }
     .carousel-caption .caption-separator{
         margin-top: 15px;
@@ -2786,8 +2812,12 @@ a.add-cart:focus {
         text-align: left;
     }
     .slider-collection .carousel-caption{
-        right: 0;
+/*        right: 0;*/
         padding-right: 20px;
+    }
+    .bmicon.bm-more{
+        width: 22px;
+        height: 22px;
     }
     
     /* --- Product ---  */
@@ -2866,6 +2896,36 @@ a.add-cart:focus {
     }
 }
 @media screen and (max-width:560px){
+    /* --- Homepage --- */
+    .featured .panel{
+        width: 440px;
+    }
+    .featured-box .featured-pict{
+        width: 320px;
+    }
+    .featured-box .back-box{
+        width: 320px;
+        height: 188px;
+    }
+    .featured-box .panel-title{
+        font-size: 24px;
+        line-height: 26px;
+    }
+    .bmicon.bm-more{
+        width: 15px;
+        height: 15px;
+    }
+    
+    /* --- Collection --- */
+    .carousel-caption .caption-separator{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .collection-single .cs-caption{
+        padding-top: 40px;
+    }
+    
+    /* --- Product --- */
     .product-banner .right-side img{
         width: 88.5%;
     }
@@ -2879,6 +2939,25 @@ a.add-cart:focus {
     }
     .product-banner .left-side{
         width: 40%;
+    }
+    .slider-collection .item-image {
+        width: 85%;
+    }
+    .slider-collection .carousel-caption{
+        right: 0;
+    }
+    .cd-left{
+        width: 47%;
+    }
+    .cd-right{
+        width: 53%;
+    }
+    .cd-right img{
+        width: 80%;
+    }
+    .cd-left .left-desc{
+        font-size: 16px;
+        line-height: 26px;
     }
 }
 @media screen and (max-width:480px){
@@ -2938,6 +3017,32 @@ a.add-cart:focus {
     .caption-separator{
         margin-bottom: 5px;
     }
+    .cd-left .left-desc{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .left-content .view-more{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .collection-single .cs-caption {
+        padding-top: 10px;
+    }
+    .slider-collection .carousel-caption{
+        padding-top: 10px;
+    }
+    .carousel-caption .cd-caption .caption-desc{
+        margin-bottom: 5px;
+    }
+    .carousel-caption .caption-separator{
+        display: block;
+    }
+    .cd-right .cd-caption .caption-separator{
+        display: block;
+    }
+    .cd-right .cd-caption{
+        padding-top: 35px;
+    }
     
     /* Product */
     .reviewer-form .form-inline .form-group{
@@ -2983,6 +3088,25 @@ a.add-cart:focus {
         padding-left: 0;
         padding-right: 6px;
     }
+    .collection-single {
+        margin-bottom: 0;
+    }
+    .carousel-control {
+        width: 40px;
+        height: 36px;
+        padding: 6px 4px;
+    }
+    .cd-caption .view-more {
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .slider-collection .item-image {
+        width: 100%;
+    }
+    .page-banner .banner-title {
+        font-size: 30px;
+        line-height: 30px;
+    }
     
     /* Footer */
     .bm-footer a, .bm-footer p{
@@ -2990,7 +3114,32 @@ a.add-cart:focus {
         line-height: 24px;
     }
 }
+@media screen and (max-width:460px){
+    .featured .panel{
+        width: 320px;
+    }
+    .featured-box .featured-pict{
+        width: 80%;
+    }
+    .featured-box .back-box{
+        width: 80%;
+        height: 136px;
+        top: -28px;
+    }
+    .featured-box .panel-title{
+        font-size: 20px;
+        line-height: 22px;
+        margin-top: 15px;
+    }
+    .featured-right{
+        margin-bottom: 0;
+    }
+}
 @media screen and (max-width:440px){
+    .navbar-toggle .icon-bar {
+        width: 30px;
+        height: 6px;
+    }
     .product-banner .left-side{
         padding-top: 10px;
     }
@@ -3027,7 +3176,6 @@ a.add-cart:focus {
         margin-right: auto;
     }
     .cd-right .cd-caption {
-        text-align: center;
         padding-left: 0;
     }
     .collection-single .cs-caption{
@@ -3087,9 +3235,40 @@ a.add-cart:focus {
     .filters .filter-tool{
         width: 80%;
     }
+    
+    /* --- Product --- */
+    .carousel-control {
+        width: 35px;
+        height: 30px;
+    }
+    
 }
 
 @media screen and (max-width:380px){
+    /* --- Homepage --- */
+    .home-banner .slider-title {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .carousel-control .bmicon {
+        width: 24px;
+        height: 10px;
+    }
+    .home-banner .carousel-control{
+        padding: 10px;
+    }
+    .home-banner .slider-controls{
+        bottom: 0;
+        text-align: right;
+    }
+    
+    /* Featured */
+    .content-title{
+        line-height: 32px;
+    }
+    
     .product-banner .left-side{
         width: auto;
     }
@@ -3160,6 +3339,23 @@ a.add-cart:focus {
         width: 100%;
         float: none;
         text-align: center;
+    }
+}
+@media screen and (max-width: 360px){
+    .navbar{
+        text-align: left;
+    }
+    .navbar-default .navbar-brand{
+        margin-left: 5px;
+    }
+    .featured .panel{
+        width: 250px;
+    }
+    .featured-box .back-box{
+        height: 103px;
+    }
+    .featured-box .featured-caption{
+        height: auto;
     }
 }
 @media screen and (max-width: 320px){
