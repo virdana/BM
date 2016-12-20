@@ -46,6 +46,15 @@
        url('../fonts/roboto.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url('../fonts/latohairline.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/latohairline.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/latohairline.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/latohairline.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/latohairline.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 /* Font Smoothing */
 html {
     text-rendering: optimizeLegibility !important;
@@ -564,6 +573,7 @@ body{
     letter-spacing: 0;
     color: #757575;
     padding: 15px 30px;
+    text-transform: uppercase;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -614,7 +624,133 @@ body{
     top: 3px;
     right: 0;
 }
-
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #000;
+    background-color: transparent;
+}
+.navbar-icon li.search,
+.navbar-icon li.cart-submenu{
+    position: absolute;
+    right: 0;
+}
+.navbar-icon li.search{
+    right: 50px;
+}
+.navbar-icon li.cart-submenu{
+    text-align: right;
+}
+.navbar-icon li.cart-submenu a{
+    display: inline-block;
+}
+.cart-submenu .cart-panel{
+    right: -50px;
+}
+.cart-submenu{
+    z-index: 9999;
+}
+.cart-panel{
+    -webkit-box-shadow: 1px 0px 11px 0px rgba(0,0,0,0.17);
+    -moz-box-shadow: 1px 0px 11px 0px rgba(0,0,0,0.17);
+    box-shadow: 1px 0px 11px 0px rgba(0,0,0,0.17);
+    width: 340px;
+    padding: 0;
+    border-radius: 0;
+    font-family: 'Lato', Fallback, sans-serif;
+    background: #fcfcfc;
+    z-index: 9999;
+}
+.cart-panel .panel-heading{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 15px 20px;
+    background-color: #6d6e6e;
+}
+.cart-panel .panel-heading h3{
+    font-size: 15px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+}
+.cart-panel .panel-body{
+    padding: 25px 25px 0;
+    background: #fcfcfc;
+    height: 415px;
+    overflow: hidden;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    overflow: -moz-scrollbars-none;
+}
+.simplebar-scroll-content{
+    padding: 25px 25px 0;
+    width: 340px !important;
+}
+.cart-panel .cart-item{
+    margin-bottom: 30px;
+}
+.cart-panel .cart-item.last{
+    margin-bottom: 0;
+}
+.cart-panel .cart-image{
+    padding-right: 10px;
+}
+.cart-panel .cart-desc{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.cart-panel .ordetail-name{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #000;
+}
+.cart-panel .ordetail-desc .col-xs-5{
+    padding-right: 10px;
+}
+.cart-panel .ordetail-desc .col-xs-7{
+    padding-left: 10px;
+}
+.cart-panel .ordetail-desc span{
+    color: #464646;
+    font-size: 13px;
+    line-height: 19px;
+}
+.cart-panel .cart-total .col-xs-8{
+    text-align: right;
+}
+.cart-panel .cart-total{
+    font-weight: 900;
+    color: #464646;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cart-total .col-xs-4{
+    padding-left: 5px;
+}
+.cart-panel .admin-form{
+    margin-top: 20px;
+}
+.cart-panel .admin-form .col-xs-7{
+    padding-right: 10px;
+}
+.cart-panel .admin-form .col-xs-5{
+    padding-left: 10px;
+}
+.cart-panel .admin-form .btn{
+    width: 100%;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+}
+.navbar-icon li.username{
+    right: 100px;
+}
+.navbar-icon li.username a{
+    font-family: 'Lato', Fallback, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+}
 
 /* --- View More --- */
 .view-more{
@@ -750,7 +886,7 @@ a.view-more:focus {
     width: 146px;
     right: 0;
     bottom: 45px;
-    z-index: 9999;
+    z-index: 999;
 }
 
 /* - Featured - */
@@ -1514,6 +1650,27 @@ a.add-cart:focus {
 .share-socmed a span{
     color: #b7b7b7;
 }
+/*
+.btn.toggleproduct{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    border-color: transparent;
+}
+*/
+/*
+.share-socmed .btn-default:hover,
+.share-socmed .btn-default:focus{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+*/
 .pd-right-slider .review .starrr{
     font-size: 20px;
     display: inline-block;
@@ -1547,7 +1704,7 @@ a.add-cart:focus {
     margin-top: 0;
     text-transform: uppercase;
     font-size: 32px;
-    font-weight: 900;
+    font-weight: 500;
     line-height: 36px;
     letter-spacing: 0;
 }
@@ -1932,11 +2089,852 @@ a.add-cart:focus {
 }
 
 
+/* --- About --- */
+.about-content h3{
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+.about-content p{
+    font-family: 'Raleway', Fallback, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #000;
+    opacity: 0.5;
+}
+.about-content .first-page{
+    opacity: 1;
+}
+
+
+/* --- Admin --- */
+.admin-menu{
+    border-bottom: 4px solid #e9e9e9;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+.admin-menu .navbar-nav > li > a{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.admin-content{
+    background-color: #f6f6f6;
+    min-height: 826px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
+}
+.admin-content .collection-single {
+    margin-bottom: 0;
+}
+.admin-caption{
+    font-family: 'Lato', Fallback, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    width: 65%;
+    margin: 25px auto;
+}
+.admin-form{
+    font-family: 'Lato', Fallback, sans-serif;
+    font-weight: 400;
+}
+.admin-form .form-group .col-sm-4.left{
+    padding-right: 5px;
+}
+.admin-form .form-group .col-sm-4.right{
+    padding-left: 5px;
+}
+.admin-form .form-group .col-sm-3.right{
+    padding-left: 5px;
+}
+.admin-form .form-control {
+    height: auto;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #707070;
+    background-color: #fcfcfc;
+    background-image: none;
+    border: 1px solid #707070;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.large-margin .form-control{
+    margin-bottom: 5px;
+}
+.admin-form .form-control:focus {
+    border-color: #707070;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.admin-form .form-control::-moz-placeholder{
+    font-family: 'Lato', Fallback, sans-serif;
+    color: #707070;
+}
+.admin-form .form-control:-moz-placeholder{
+    font-family: 'Lato', Fallback, sans-serif;
+    color: #707070;
+}
+.admin-form .form-control:-ms-input-placeholder{
+    font-family: 'Lato', Fallback, sans-serif;
+    color: #707070;
+}
+.admin-form .form-control:focus:-ms-input-placeholder{
+    font-family: 'Lato', Fallback, sans-serif;
+    color: #707070;
+}
+.admin-form .form-control::-webkit-input-placeholder{
+    font-family: 'Lato', Fallback, sans-serif;
+    color: #707070;
+}
+.admin-form input.form-control[placeholder]{
+    font-family: 'Lato', Fallback, sans-serif;
+    color: #707070;
+}
+.admin-form .form-control[placeholder]{
+    font-family: 'Lato', Fallback, sans-serif;
+    color: #707070;
+}
+.admin-form .control-label{
+    font-size: 18px;
+    font-weight: 400;
+}
+.admin-form .btn{
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.large-margin{
+    padding-left: 45px;
+}
+.large-margin .btn{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.btn-large,
+.admin-panel .panel-body .btn.btn-large{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.btn-black{
+    border: 1px solid #000;
+    color: #fff;
+    background: #000;
+}
+.btn-black:hover,
+.btn-black:focus{
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+}
+.btn-white{
+    border: 1px solid #000;
+    color: #000;
+    background: #fff;
+}
+.btn-white:hover,
+.btn-white:focus{
+    color: #000;
+    background: #f3f3f3;
+    border: 1px solid #000;
+}
+.btn-blue{
+    border: 1px solid #415f9b;
+    color: #fff;
+    background: #415f9b;
+}
+.btn-blue:hover,
+.btn-blue:focus{
+    color: #fff;
+    background: rgba(65, 95, 155, 0.83);
+}
+.btn-transparent{
+    border: 1px solid #000;
+    color: #000;
+    background: transparent;
+}
+.btn-transparent:hover,
+.btn-transparent:focus{
+    color: #000;
+    background: rgba(0, 0, 0, 0.05);
+}
+.admin-panel{
+    font-family: 'Lato', Fallback, sans-serif;
+    border-radius: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.admin-panel .panel-heading{
+    background-color: #dfdfdf;
+    border-color: transparent;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 25px;
+}
+.admin-panel .panel-heading h4{
+    font-family: 'Lato', Fallback, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.admin-panel .panel-body{
+    font-family: 'Lato', Fallback, sans-serif;
+    font-size: 14px;
+    color: #000;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.admin-panel .top-desc{
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+.admin-panel .tag-red{
+    color: #ff0000;
+}
+.admin-panel .panel-body a{
+    color: #000;
+}
+.admin-panel .control-label{
+    text-align: left;
+    font-weight: 400;
+}
+.admin-panel .panel-body .btn{
+    border-radius: 0;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.admin-panel .desc{
+    line-height: 28px;
+}
+.admin-sidebar{
+    border: 1px solid #b7b7b7;
+}
+.admin-sidebar .panel-heading{
+    border-bottom: 1px solid #b7b7b7;
+}
+.admin-sidebar .panel-body{
+    padding-left: 0;
+    padding-right: 0;
+}
+.admin-sidebar .nav-pills > li > a {
+    font-family: 'Lato', Fallback, sans-serif;
+    font-size: 14px;
+    color: #464646;
+    border-radius: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.admin-sidebar .nav-pills > li.active > a,
+.admin-sidebar .nav-pills > li.active > a:hover,
+.admin-sidebar .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: #464646;
+}
+
+
+/* --- Login --- */
+.login-content{
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.admin-separator{
+    position: relative;
+    margin-top: 40px;
+}
+.admin-separator hr{
+    border-top-color: #000;
+}
+.admin-link{
+    color: #000;
+    font-size: 18px;
+}
+.btn-or{
+    border: 2px solid #fff;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+    width: 64px;
+    height: 62px;
+    font-family: 'Lato', Fallback, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+/* --- Order Tracking --- */
+.admin-order .panel-body{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.ordered-item .item-header{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    background: #dfdfdf;
+    font-size: 13px;
+    font-weight: 600;
+}
+.ordered-item .order-number{
+    position: relative;
+    top: 5px;
+}
+.ordered-item .item-date{
+    margin-right: 30px;
+}
+.ordered-item .col-md-7{
+    text-align: right;
+}
+.admin-panel .panel-body .ordered-item .btn{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+    font-weight: 300;
+}
+.ordered-item .table > tbody > tr > th{
+    border-top: none;
+    opacity: 0.8;
+    font-size: 13px;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.ordered-item .table > tbody > tr > td{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* --- Order Tracking Detail --- */
+.admin-ordetail{
+    margin-bottom: 0;
+}
+.ordetail-top .panel-body{
+    padding-bottom: 25px;
+}
+.ordetail-top .panel-body h5{
+    font-size: 13px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cbd3d9;
+}
+.ordetail-top .panel-body p{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.ordetail-bottom .ordetail-separator{
+    width: 81px;
+    margin-left: 0;
+    margin-top: 0;
+    border-top: 1px solid #cbd3d9;
+}
+.ordetail-bottom .product-desc img{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.ordetail-bottom .ordetail-name{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.ordetail-bottom .ordetail-desc{
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #464646;
+}
+.admin-panel .panel-body .ordetail-state a,
+.ordetail-state a,
+.ordetail-state a:hover,
+.ordetail-state a:active,
+.ordetail-state a:visited,
+.ordetail-state a:focus{
+    color: #00a99d;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 900;
+    display: block;
+    width: 70%;
+}
+
+/* --- Whislist --- */
+.admin-wish .panel-body .btn{
+    font-size: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.bmicon.bm-delete-item{
+    background: url(../images/icons/delete-item.png) no-repeat;
+    width: 15px;
+    height: 13px;
+    display: inline-block;
+}
+.admin-wish{
+    padding-bottom: 15px;
+}
+.admin-wish .table > tbody > tr > th{
+    border-top: none;
+    text-transform: uppercase;
+}
+.admin-wish .wish-item td{
+    padding-bottom: 15px;
+}
+.admin-wish .wish-item td:first-child{
+    padding-top: 30px;
+}
+.admin-wish .wish-item td .col-xs-8{
+    padding-top: 10px;
+}
+.admin-wish .wish-item td{
+    padding-top: 40px;
+}
+
+
+/* --- Lihat Pesanan --- */
+.admin-cont-header{
+    font-family: 'Lato', Fallback, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.admin-pesanan .panel-body{
+    padding-top: 25px;
+}
+.admin-pesanan .panel-heading{
+    padding-right: 30px;
+}
+.admin-pesanan .product-name{
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.admin-pesanan .form-group{
+    margin-bottom: 0;
+}
+.admin-pesanan .control-label{
+    padding-top: 0;
+    font-size: 18px;
+}
+.admin-pesanan .pesanan-item p{
+    font-size: 18px;
+    color: ##2e2e2e;
+}
+.admin-pesanan .pesanan-item{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.admin-pesanan .pesanan-item:not(:last-child){
+    border-bottom: 1px solid #c2c2c2;
+}
+.admin-pesanan .jumlah{
+    margin-bottom: 10px;
+}
+.admin-pesanan .jumlah .form-control{
+    padding: 0;
+    padding-right: 5px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+.admin-pesanan .admin-form .form-group{
+    color: #464646;
+    font-size: 18px;
+}
+.admin-pesanan .admin-form .form-group p{
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: inherit;
+}
+
+.admin-rightbar .panel-heading .form-group{
+    margin-bottom: 0;
+}
+.admin-rightbar .panel-heading .form-group .form-control{
+    border: none;
+    font-size: 13px;
+}
+.admin-rightbar .admin-form .input-group-btn .btn{
+    padding: 7px 24px;
+}
+.admin-rightbar .panel-body{
+    padding: 0;
+    border-bottom: 1px solid #b7b7b7;
+}
+.admin-rightbar .panel-body .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.admin-rightbar .rightbar-item{
+    padding: 15px 25px;
+    border: 1px solid #b7b7b7;
+    border-bottom: none;
+}
+.admin-rightbar .rightbar-item p{
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.admin-rightbar .rightbar-item p.rightbar-caption{
+    width: 80%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #464646;
+    text-transform: none;
+}
+.rightbar-item a{
+    margin-bottom: 10px;
+}
+.rightbar-item .button-container{
+    margin-top: 30px;
+    text-align: center;
+}
+.rightbar-item a.btn{
+    white-space: normal;
+}
+.rightbar-item a.btn-black{
+    color: #fff;
+}
+.btn-red{
+    background: #9d0b0e;
+    color: #fff;
+}
+.btn-red:hover,
+.btn-red:focus{
+    color: #fff;
+    background: rgba(157, 11, 14, 0.78);
+}
+
+
+/* --- Admin Bank Transfer --- */
+.step-content .admin-panel{
+    padding-bottom: 30px;
+}
+.admin-steps{
+    margin-bottom: 25px;
+}
+.admin-steps li{
+    font-family: 'Lato', Fallback, sans-serif;
+    text-align: center;
+    width: 22%;
+    font-weight: 900;
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+    position: relative;
+    vertical-align: top;
+}
+.admin-steps li.steps-person{
+    width: 26%;
+    text-transform: none;
+}
+.admin-steps li.active .steps-number{
+    padding-top: 10px;
+    background: #111;
+    color: #fff;
+    border: none;
+}
+.admin-steps .steps-number{
+    background: #fff;
+    border: 3px solid #b7b7b7;
+    color: #b7b7b7;
+    width: 48px;
+    height: 48px;
+    font-size: 23px;
+    padding: 8px 0 10px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 25px;
+    z-index: 3;
+    position: relative;
+}
+.admin-steps .steps-separator{
+    border-top: 3px solid #b7b7b7;
+    width: 66px;
+    position: absolute;
+    top: 12px;
+    right: -35px;
+    z-index: 0;
+}
+.admin-steps .steps-person .steps-separator{
+    right: -28px;
+}
+.admin-panel .tab-method .nav-pills > li > a{
+    border-radius: 0;
+    background: #b7b7b7;
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+}
+.admin-panel .tab-method .nav-pills > li.active > a,
+.admin-panel .tab-method .nav-pills > li.active > a:hover,
+.admin-panel .tab-method .nav-pills > li.active > a:focus{
+    background: #707070;
+}
+.tab-method .tab-content{
+    padding-top: 20px;
+}
+.tab-method .nav-pills > li > a:hover,
+.tab-method .nav-pills > li > a:focus{
+    background: #b7b7b7;
+}
+.tab-method .bank-account{
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.tab-method .tab-desc{
+    font-size: 15px;
+    line-height: 24px;
+    color: #464646;
+    margin-bottom: 25px;
+}
+.admin-panel .tab-method a.btn-black{
+    color: #fff;
+    padding: 15px 50px;
+    margin-bottom: 30px;
+}
+.credit-caption{
+    font-size: 12px;
+    line-height: 24px;
+}
+.credit-form .panel{
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #ebebeb;
+    background-color: #ebebeb;
+    width: 442px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+.credit-form .control-label{
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #555;
+}
+.credit-form .form-control{
+    font-size: 12px;
+}
+.credit-form .code,
+.credit-form .date{
+    padding-right: 10px;
+}
+.credit-form .date .left{
+    padding-right: 10px;
+}
+.credit-form .date .form-control{
+    text-transform: uppercase;
+}
+.credit-form .code .form-control{
+    width: 100px;
+}
+.credit-form .cc-icon{
+    margin-left: 10px;
+}
+.check-transfer .checkbox{
+    margin-bottom: 20px;
+}
+.check-transfer label{
+    font-size: 12px;
+    color: #111;
+}
+.check-transfer .checkbox label:after, 
+.check-transfer .radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.check-transfer .checkbox .cr,
+.check-transfer .radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #0e9fd6;
+    background: #0e9fd6;
+    border-radius: .25em;
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin-right: .5em;
+    color: #fff;
+    top: 3px;
+}
+.check-transfer .radio .cr {
+    border-radius: 50%;
+}
+.check-transfer .checkbox .cr .cr-icon,
+.check-transfer .radio .cr .cr-icon {
+    position: absolute;
+    line-height: 0;
+    top: -1px;
+    left: -1px;
+    width: 12px;
+    height: 12px;
+    background: url(../images/icons/check-white.png) no-repeat;
+    background-position: center center;
+}
+.check-transfer .radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+.check-transfer .checkbox label input[type="checkbox"],
+.check-transfer .radio label input[type="radio"] {
+    display: none;
+}
+.check-transfer .checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.check-transfer .radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+.check-transfer .checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.check-transfer .radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+.check-transfer .checkbox label input[type="checkbox"]:disabled + .cr,
+.check-transfer .radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+.check-transfer .btn{
+    margin-bottom: 35px;
+}
+
+
+/* --- Pilih Alamat Pengiriman --- */
+.select-address{
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+.radio-container{
+    border: 1px solid #707070;
+    margin-bottom: 45px;
+}
+.radio-container.double{
+    border: none;
+    margin-bottom: 0;
+}
+.radio-container input[type=radio]{
+    display: none;
+}
+.radio-container .radio{
+    padding: 18px 28px 0;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 0;
+}
+.radio-container .radio.double{
+    border: 1px solid #707070;
+    margin-bottom: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.radio-container .radio .glyphicon{
+    font-weight: 900;
+    font-size: 16px;
+}
+.radio-container .radio .glyphicon-map-marker{
+    font-size: 20px;
+}
+.radio-container .radio p{
+    margin-bottom: 20px;
+}
+.radio-container input[type=radio]:checked + .radio{
+    border: 4px solid #707070;
+    padding: 15px 25px;
+}
+.select-address .add-address{
+    font-size: 15px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 30px;
+}
+.select-address .double .add-address{
+    margin-top: 30px;
+}
+.select-address a.add-address:focus,
+.select-address a.add-address:visited{
+    outline: none;
+}
+.select-address .btn-address .btn{
+    padding: 15px 50px;
+    margin-bottom: 30px;
+}
+.modal-address .modal-body{
+    padding: 55px 80px;
+}
+.modal-address .admin-form .control-label {
+    font-size: 14px;
+    font-weight: 300;
+}
+.modal-address .admin-form .form-control{
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+}
+.modal-address .admin-form .btn{
+    padding: 10px 25px;
+    margin-top: 20px;
+}
+.modal-address .modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+
+/* --- Cek Ulang Pesanan --- */
+.check-panel .check-title{
+    margin-bottom: 60px;
+}
+.check-table{
+    margin-top: 60px;
+}
+.check-table .check-item td{
+    padding: 25px 0 15px;
+    border-top: 1px solid #cbd3d9;
+    border-bottom: 1px solid #cbd3d9;
+}
+.check-table .check-desc{
+    font-size: 13px;
+    font-weight: 400;
+    text-align: right;
+    padding-bottom: 45px;
+}
+.check-table .btn-check{
+    width: 200px;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+
 /* --- Media Queries --- */
 @-ms-viewport{
     width: device-width;
 }
-
 @media (min-width: 768px){
     .navbar {
         border-radius: 0;
@@ -1955,6 +2953,16 @@ a.add-cart:focus {
     }
     .pr-related .carousel .carousel-control.right{
         right: -10px;
+    }
+}
+@media screen and (max-width:1299px){
+    .cart-submenu .cart-panel {
+        right: -15px;
+    }
+}
+@media screen and (max-width:1219px){
+    .cart-submenu .cart-panel {
+        right: -5px;
     }
 }
 @media screen and (max-width:1199px){
@@ -2013,6 +3021,14 @@ a.add-cart:focus {
         width: 80%;
     }
     
+    /* --- Order Tracking --- */
+    .ordered-item .item-date{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .ordered-item .col-md-7{
+        text-align: center;
+    }
 }
 @media screen and (max-width:1024px){
     .co{
@@ -2180,7 +3196,6 @@ a.add-cart:focus {
     }
     
     /* --- Homepage --- */
-    /* Header */
     .home-banner .carousel-caption{
         width: 750px;
         padding-left: 15px;
@@ -2194,9 +3209,6 @@ a.add-cart:focus {
         line-height: 35px;
         margin-top: 15px;
         margin-bottom: 15px;
-    }
-    .home-banner .carousel-caption{
-/*        top: 0;*/
     }
     
     .featured-box{
@@ -2227,7 +3239,7 @@ a.add-cart:focus {
         margin-bottom: 15px;
     }
     
-    /* Collection */
+    /* --- Collection --- */
     .caption-bottom{
         display: none;
     }
@@ -2262,7 +3274,7 @@ a.add-cart:focus {
         margin-bottom: 20px;
     }
     
-    /* Product */
+    /* --- Product --- */
     .product-banner{
         width: 750px;
         margin-left: auto;
@@ -2393,7 +3405,7 @@ a.add-cart:focus {
         border-bottom-right-radius: 0;
     }
         
-    /* Product Detail */
+    /* --- Product Detail --- */
     .product-detail-slider .container{
         padding-left: 15%;
         padding-right: 15%;
@@ -2461,6 +3473,51 @@ a.add-cart:focus {
         margin-right: auto;
     }
     
+    /* --- About --- */
+    .about{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .about-image{
+        width: 45%;
+    }
+    .about-image img{
+        width: 100%;
+        height: auto;
+    }
+    .about-content{
+        width: 50%;
+    }
+    
+    /* --- Admin --- */
+    .admin-menu .navbar-nav > li > a{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .admin-menu .navbar-icon > li > a{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .admin-form .form-group .col-sm-4{
+        margin-bottom: 5px;
+    }
+    .login-content .form-group .btn{
+        margin-bottom: 5px;
+    }
+    .large-margin{
+        padding-left: 0;
+    }
+    .ordetail-bottom .ordetail-desc{
+        font-size: 13px;
+    }
+    .rightbar-item p .pull-right{
+        float: none !important;
+        display: block;
+    }
+    .admin-pesanan .form-group{
+        margin-bottom: 10px;
+    }
+    
     /* --- Footer --- */
     .bm-footer .footer-caption{
         width: 100%;
@@ -2492,8 +3549,13 @@ a.add-cart:focus {
     }
     
 }
+@media screen and (max-width:998px){
+    .cart-submenu .cart-panel {
+        right: 0;
+    }
+}
 @media screen and (max-width:800px){
-    /* Product Detail */
+    /* --- Product Detail --- */
     .product-detail-slider{
         padding-left: 0;
         padding-right: 0;
@@ -2505,7 +3567,9 @@ a.add-cart:focus {
         top: 0;
     }
 }
+
 @media screen and (max-width:767px){
+    /* --- Coming Soon --- */
     .container .co-box{
         width: 90%;
     }
@@ -2694,6 +3758,125 @@ a.add-cart:focus {
         border-right: 0;
     }
     
+    /* --- About --- */
+    .about{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .about-image{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .about-image img{
+        width: 610px;
+        height: auto;
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .about-content h3{
+        text-align: center;
+        margin-top: 30px;
+    }
+    .about-content{
+        width: 100%;
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* --- Admin --- */
+    .admin-content{
+        min-height: inherit;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .admin-panel .panel-body{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .admin-sidebar .panel-body{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .ordetail-bottom .col-sm-6,
+    .ordetail-bottom .col-sm-3{
+        margin-bottom: 45px;
+    }
+    
+    /* --- Order Detail --- */
+    .admin-form .form-group .col-sm-4.left{
+        padding-right: 15px;
+    }
+    .admin-form .form-group .col-sm-4.right{
+        padding-left: 15px;
+    }
+    
+    /* --- Order Detail --- */
+    .product-desc .col-xs-4{
+        width: 30%;
+    }
+    .product-desc .col-xs-4 img{
+        width: auto;
+    }
+    .product-desc .col-xs-8{
+        width: 50%;
+    }
+    .ordetail-desc .col-sm-6{
+        margin-bottom: 0;
+    }
+    
+    /* --- Lihat Pesanan --- */
+    .admin-rightbar .panel-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .product-name .pull-right{
+        float: none !important;
+        display: block;
+    }
+    .navbar-nav .open .cart-panel{
+        width: 340px;
+    }
+    
+    /* --- Bank Transfer --- */
+    .tab-method .nav-pills > li + li{
+        margin-left: 0;
+    }
+    .credit-form .code,
+    .credit-form .date{
+        padding-right: 15px;
+    }
+    .credit-form .code .form-control{
+        width: 80%;
+        display: inline-block;
+    }
+    .credit-form .cc-icon{
+        display: inline-block;
+    }
+    
+    /* --- Cek Ulang Pesanan --- */
+    .check-table .check-item td{
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        border: none;
+    }
+    .check-table .check-item td img{
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    .check-table .check-item{
+        border-top: 1px solid #cbd3d9;
+        border-bottom: 1px solid #cbd3d9;
+    }
+    .check-table .check-desc{
+        text-align: center;
+        margin-top: 15px;
+    }
+    
     /* --- Footer --- */
     .footer-link{
         width: 33.33333333%;
@@ -2708,6 +3891,7 @@ a.add-cart:focus {
     }
 }
 @media screen and (max-width:690px){
+    /* --- Product --- */
     .product-banner .left-side{
         padding-top: 30px;
         width: 40.5%;
@@ -2796,9 +3980,6 @@ a.add-cart:focus {
         line-height: 16px;
         margin-top: 0;
     }
-    .slider-collection .item-image{
-/*        width: 100%;*/
-    }
     .carousel-caption .caption-separator{
         margin-top: 15px;
         display: inline-block;
@@ -2812,7 +3993,6 @@ a.add-cart:focus {
         text-align: left;
     }
     .slider-collection .carousel-caption{
-/*        right: 0;*/
         padding-right: 20px;
     }
     .bmicon.bm-more{
@@ -2853,14 +4033,19 @@ a.add-cart:focus {
     .small-thumbnail{
         width: 50px;
     }
-    .single-container .pd-left-slider img{
+    .single-container .pd-left-slider img.standard{
         width: 50%;
         margin-right: auto;
     }
     
+    /* --- About --- */
+    .about-image img{
+        width: 100%;
+    }
+    
 }
 @media screen and (max-width:600px){
-    /* Product */
+    /* --- Product --- */
     .product-left{
         padding-right: 0;
     }
@@ -2894,6 +4079,15 @@ a.add-cart:focus {
         width: 72%;
         padding-left: 0;
     }
+    
+    /* --- Bank Transfer --- */
+    .admin-steps li.steps-person{
+        width: 22%;
+    }
+    .admin-steps .steps-person .steps-separator{
+        right: -35px;
+    }
+    
 }
 @media screen and (max-width:560px){
     /* --- Homepage --- */
@@ -2935,8 +4129,17 @@ a.add-cart:focus {
     .product-banner .left-side{
         width: 50%;
     }
+    /* --- Bank Transfer --- */
+    .tab-method .bank-account li{
+        margin-bottom: 15px;
+    }
+    .credit-form .panel{
+        width: 100%;
+    }
+    
 }
 @media screen and (max-width:500px){
+    /* --- Product --- */
     .product-banner .right-side img{
         width: 100%;
     }
@@ -2949,6 +4152,8 @@ a.add-cart:focus {
     .slider-collection .carousel-caption{
         right: 0;
     }
+    
+    /* --- Coming Soon --- */
     .cd-left{
         width: 47%;
     }
@@ -2962,9 +4167,23 @@ a.add-cart:focus {
         font-size: 16px;
         line-height: 26px;
     }
+    
+    /* --- Bank Transfer --- */
+    .admin-steps li.steps-person,
+    .admin-steps li{
+        width: 100px;
+        word-break: break-word;
+    }
+    .admin-steps .steps-separator{
+        display: none;
+    }
+    .check-transfer label{
+        text-align: left;
+    }
+    
 }
 @media screen and (max-width:480px){
-    /* Coming Soon */
+    /* --- Coming Soon --- */
     .container .co-box{
         width: 100%;
     }
@@ -2981,7 +4200,7 @@ a.add-cart:focus {
         margin-left: -15px;
     }
     
-    /* Homepage */
+    /* --- Homepage --- */
     .home-banner .slider-label{
         font-size: 14px;
         line-height: 15px;
@@ -3009,7 +4228,7 @@ a.add-cart:focus {
         bottom: 30px;
     }
     
-    /* Collection */
+    /* --- Collection --- */
     .collection-single .panel,
     .collection-double .panel{
         width: 90%;
@@ -3057,7 +4276,7 @@ a.add-cart:focus {
         padding-top: 35px;
     }
     
-    /* Product */
+    /* --- Product --- */
     .reviewer-form .form-inline .form-group{
         width: 100%;
         float: none;
@@ -3074,7 +4293,7 @@ a.add-cart:focus {
         padding-left: 0;
     }
     
-    /* Product Detail */
+    /* --- Product Detail --- */
     .pr-related .product-related li{
         width: 100%;
     }
@@ -3121,13 +4340,37 @@ a.add-cart:focus {
         line-height: 30px;
     }
     
-    /* Footer */
+    /* --- Order Tracking --- */
+    .ordered-item .item-date{
+        display: block;
+        margin-top: 10px;
+    }
+    .ordered-item .col-xs-5,
+    .ordered-item .col-xs-7{
+        text-align: left;
+        float: none;
+        width: 100%;
+    }
+    
+    /* --- Navbar --- */
+    .navbar-icon li{
+        top: -10px;
+    }
+    
+    /* --- Login Page --- */
+    .collection-single .panel.login-content{
+        width: 100%;
+    }
+    
+    /* --- Footer --- */
     .bm-footer a, .bm-footer p{
         font-size: 14px;
         line-height: 24px;
     }
 }
 @media screen and (max-width:460px){
+    
+    /* --- Homepage --- */
     .featured .panel{
         width: 320px;
     }
@@ -3147,12 +4390,16 @@ a.add-cart:focus {
     .featured-right{
         margin-bottom: 0;
     }
+    
 }
 @media screen and (max-width:440px){
+    /* --- Navigation Bar --- */
     .navbar-toggle .icon-bar {
         width: 30px;
         height: 6px;
     }
+    
+    /* --- Product --- */
     .product-banner .left-side{
         padding-top: 10px;
     }
@@ -3163,6 +4410,8 @@ a.add-cart:focus {
         position: relative;
         text-align: left;
     }
+    
+    /* --- Homepage --- */
     .home-banner .slider-container {
         width: 600px;
         height: 280px;
@@ -3177,8 +4426,19 @@ a.add-cart:focus {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    
+    /* --- Login --- */
+    .admin-caption{
+        width: auto;
+    }
+    
+    /* --- Alamat Pengiriman --- */
+    .modal-address .modal-body{
+        padding: 25px 15px;
+    }
 }
 @media screen and (max-width:400px){
+    /* --- Coming Soon --- */
     .co-box{
         height: 45%;
         padding: 20px 15px;
@@ -3188,7 +4448,12 @@ a.add-cart:focus {
         margin-top: 15px;
     }
     
-    /* Homepage */
+    /* --- Navbar --- */
+    .navbar-icon li.search{
+        right: 30px;
+    }
+    
+    /* --- Homepage --- */
     .home-banner .slider-container {
         width: 580px;
         height: 260px;
@@ -3207,7 +4472,7 @@ a.add-cart:focus {
     }
     
     
-    /* Collection */
+    /* --- Collection --- */
     .cd-left,
     .cd-left .left-content,
     .cd-left .left-desc {
@@ -3275,17 +4540,69 @@ a.add-cart:focus {
     .product-banner .right-side img{
         width: 91%;
     }
-    .filter-collection{
-/*        width: 42%;*/
-    }
     .filters .filter-tool{
         width: 80%;
     }
-    
-    /* --- Product --- */
     .carousel-control {
         width: 35px;
         height: 30px;
+    }
+    
+    /* --- Cart Submenu --- */
+    .cart-panel{
+        min-width: 240px;
+        height: auto;
+    }
+    .simplebar-scroll-content{
+        padding: 25px 25px 0;
+        width: auto!important;
+    }
+    .cart-item .cart-image,
+    .cart-item .cart-desc{
+        float: none;
+        width: 100%;
+    }
+    .navbar-icon li.cart-submenu{
+        right: -10px;
+    }
+    .cart-panel .cart-total .col-xs-8{
+        text-align: left;
+        padding-left: 10px;
+        width: 45%;
+    }
+    .cart-panel .cart-total .col-xs-4{
+        text-align: left;
+        padding-left: 0;
+        width: 55%;
+    }
+    .cart-panel .admin-form .col-xs-7,
+    .cart-panel .admin-form .col-xs-5{
+        float: none;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 10px;
+    }
+    .cart-panel .admin-form .btn{
+        margin-bottom: 10px;
+    }
+    .cart-panel .admin-form .btn-black{
+        margin-bottom: 30px;
+    }
+    .navbar-nav .open .cart-panel{
+        width: 240px;
+    }
+    
+    /* --- Bank Transfer --- */
+    .admin-panel .tab-method .btn{
+        white-space: normal;
+    }
+    .credit-form .code .form-control{
+        width: 65%;
+    }
+    .tk-content{
+        padding-left: 0;
+        padding-right: 0;
     }
     
 }
@@ -3380,6 +4697,8 @@ a.add-cart:focus {
         padding-left: 0;
         padding-right: 0;
     }
+    
+    /* --- Footer --- */
     .footer-link.footer-min {
         padding-left: 15px;
         padding-right: 15px;
@@ -3423,6 +4742,25 @@ a.add-cart:focus {
         font-size: 18px;
         line-height: 24px;
     }
+    
+    /* - Login - */
+    .login-content .form-group .btn{
+        white-space: normal;
+        text-align: left;
+    }
+    
+    /* --- Order Detail --- */
+    .product-desc .col-xs-4{
+        width: 100%;
+        float: none;
+    }
+    .product-desc .col-xs-4 img{
+        width: auto;
+    }
+    .product-desc .col-xs-8{
+        width: 100%;
+        float: none;
+    }
 }
 @media screen and (max-width: 320px){
     .product-content h3{
@@ -3436,6 +4774,12 @@ a.add-cart:focus {
     }
     .home-banner .slider-caption {
         width: 25%;
+    }
+    
+    /* --- Cek Ulang Pesan --- */
+    .check-table .btn-check{
+        display: inline-block;
+        width: 100%;
     }
 }
 @media screen and (max-width: 300px){

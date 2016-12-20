@@ -24,12 +24,12 @@
         
         <!-- Custom Style -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/custom.css">
+        
         
     </head>
     <body>
         <div class="side-collapse-container">
-            <header class="menu">
+            <header class="menu admin-menu">
                 <div class="container">
                     <div class="row">
                         <nav class="navbar navbar-default">
@@ -48,15 +48,17 @@
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <div class="side-collapse in">
-                                                <ul class="nav navbar-nav">
-                                                    <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                                                    <li><a href="#">About</a></li>
-                                                    <li><a href="#">Shop</a></li>
-                                                    <li class="active"><a href="#">Blog</a></li>
-                                                    <li><a href="#">Collections</a></li>
-                                                </ul>
+                                            <ul class="nav navbar-nav">
+                                                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                                                <li><a href="#">About</a></li>
+                                                <li><a href="#">Shop</a></li>
+                                                <li><a href="#">Blog</a></li>
+                                                <li><a href="#">Collections</a></li>
+                                                <li class="visible-xs visible-sm"><a href="#">Nama User</a></li>
+                                            </ul>
                                         </div>
                                         <ul class="nav navbar-nav navbar-right navbar-icon">
+                                            <li class="hidden-xs hidden-sm username"><a href="#">Nama User</a></li>
                                             <li class="search"><a href="#"><span class="bmicon bm-search"></span></a></li>
                                             <li class="cart-submenu">
                                                 <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -146,207 +148,100 @@
                     </div>
                 </div>
             </header>
-        
-            <section class="page-banner blog-banner">
-                <div class="container">
-                    <div class="row">
-                        <h1 class="banner-title">BLOG</h1>
-                        <p class="banner-caption">GRID NO SIDEBAR</p>
-                    </div>
-                </div>
-            </section>
             
-            <!-- Collection Item 1 -->
-            <div class="page-space">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="post col-lg-12 col-sm-6">
-                                <img src="images/thumbnails/blog/post1.jpg" class="post-thumbnail img-responsive">
-                                <a href="blog_single.html"><h2> How To Find The Right Glasses For Your Face</h2></a>    
-                                <span>1 hours ago</span>
-                                <a href="blog_single.html" class="readmore">Read More 
-                                <span class="bmicon bm-slider-right"></span></a>
+            <!-- Login Form -->
+            <div class="admin-content">
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="panel panel-default admin-panel admin-sidebar" style="background-color: white">
+                                    <div class="panel-heading">
+                                        <h4>My Account</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <ul class="nav nav-pills nav-stacked">
+                                            <li role="presentation"><a href="#">My Account</a></li>
+                                            <li role="presentation"><a href="#">Order &amp; Tracking</a></li>
+                                            <li role="presentation" class="active"><a href="#">Konfirmasi Transfer</a></li>
+                                            <li role="presentation"><a href="#">Wishlist</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="post col-lg-12 col-sm-6">
-                                <img src="images/thumbnails/blog/post2.jpg" class="post-thumbnail img-responsive">
-                                <a href="blog_single.html"><h2> How To Find The Right Glasses For Your Face</h2></a>    
-                                <span>1 hours ago</span>
-                                <a href="blog_single.html" class="readmore">Read More 
-                                <span class="bmicon bm-slider-right"></span></a>
-                            </div>
-                            <div class="post col-lg-12 col-sm-6">
-                                <img src="images/thumbnails/blog/post3.jpg" class="post-thumbnail img-responsive">
-                                <a href="blog_single.html"><h2> How To Find The Right Glasses For Your Face</h2></a>    
-                                <span>1 hours ago</span>
-                                <a href="blog_single.html" class="readmore">Read More 
-                                <span class="bmicon bm-slider-right"></span></a>
-                            </div>
-                            <div class="post col-lg-12 col-sm-6">
-                                <img src="images/thumbnails/blog/post4.jpg" class="post-thumbnail img-responsive">
-                                <a href="blog_single.html"><h2> How To Find The Right Glasses For Your Face</h2></a>    
-                                <span>1 hours ago</span>
-                                <a href="blog_single.html" class="readmore">Read More 
-                                <span class="bmicon bm-slider-right"></span></a>
-                            </div>
-                            <div class="post col-lg-12 col-sm-6">
-                                <img src="images/thumbnails/blog/post5.jpg" class="post-thumbnail img-responsive">
-                                <a href="blog_single.html"><h2> How To Find The Right Glasses For Your Face</h2></a>    
-                                <span>1 hours ago</span>
-                                <a href="blog_single.html" class="readmore">Read More 
-                                <span class="bmicon bm-slider-right"></span></a>
-                            </div>
-
-                            <div class="clearfix"></div>
-
-                            <div class="paging">
-                                <a href="#" class="active">1</a> 
-                                <a href="#">2</a> 
-                                <a href="#">3</a> 
-                            </div>
-
-                        </div>
-                        <div class="col-md-4 sidebar">
-                            <div class="post-search  hidden-sm hidden-xs col-md-12 col-sm-6">
-                                <h2>Search</h2>
-                                <input type="text" name="search" placeholder="Type & Hit enter..." class="form-control">
-                            </div>
-
-                            <div class="post-collection hidden-sm hidden-xs col-md-12 col-sm-6">
-                                <div class="product-collection">
-                                <h2>Collection</h2>
-                                <hr class="side-separator">
-                                <div class="panel-group panel-collection" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionOne" aria-expanded="true" aria-controls="collapseOne">Collection 1</a>
-                                            </h4>
-                                        </div>
-                                        <div id="collectionOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default admin-panel" style="background-color: white">
+                                            <div class="panel-heading">
+                                                <h4>Konfirmasi Pembayaran</h4>
+                                            </div>
                                             <div class="panel-body">
-                                                <h5 class="body-title">Collection Categories</h5>
-                                                <p>Name</p>
-                                                <p>Name</p>
+                                                <p class="top-desc text-center">Terima kasih telah berbelanja di batik melati
+                                                <br>Bila anda telah melakukan pembayaran secara <span class="tag-red">BANK TRANSFER</span> 
+                                                <br>konfirmasikan pembayaran anda disini agar dapat kami proses segera.</p>
+                                                <form name="" action="" method="" class="admin-form form-horizontal large-margin">
+                                                    <div class="form-group">
+                                                        <label for="no_order" class="control-label col-sm-5 col-md-4">Nomor Order</label>
+                                                        <div class="col-sm-7 col-md-7">
+                                                            <input type="text" name="no_order" class="form-control" placeholder="Masukkan no order anda">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="bank_tujuan" class="control-label col-sm-5 col-md-4">Bank Tujuan</label>
+                                                        <div class="col-sm-7">
+                                                            <select name="bank_tujuan" class="form-control">
+                                                                <option selected disabled>Pilih Bank</option>
+                                                                <option>BCA</option>
+                                                                <option>BRI</option>
+                                                                <option>BNI</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="bank_anda" class="control-label col-sm-5 col-md-4">Bank Anda</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" name="bank_anda" class="form-control" placeholder="Masukkan nama bank">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="nama_rek" class="control-label col-sm-5 col-md-4">Rekening Atas Nama</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="text" name="nama_rek" class="form-control" placeholder="Masukkan nama rek">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="metode_transfer" class="control-label col-sm-5 col-md-4">Metode Transfer</label>
+                                                        <div class="col-sm-7">
+                                                            <select name="metode_transfer" class="form-control">
+                                                                <option selected disabled>Pilih metode pembayaran</option>
+                                                                <option>Transfer</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="tgl_transfer" class="control-label col-sm-5 col-md-4">Tanggal Transfer</label>
+                                                        <div class="col-sm-7">
+                                                            <input type="date" name="tgl_transfer" class="form-control" placeholder="Tanggal/bulan/tahun">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-sm-offset-4 col-sm-7">
+                                                            <button type="submit" class="btn btn-black">Konfirmasi</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingTwo">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionTwo" aria-expanded="true" aria-controls="collapseOne">
-                                                    Collection name
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collectionTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                            <div class="panel-body">
-                                                <h5 class="body-title">Collection Categories</h5>
-                                                <p>Name</p>
-                                                <p>Name</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionThree" aria-expanded="true" aria-controls="collapseOne">
-                                                    Collection name
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collectionThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                            <div class="panel-body">
-                                                <h5 class="body-title">Collection Categories</h5>
-                                                <p>Name</p>
-                                                <p>Name</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingFour">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionFour" aria-expanded="true" aria-controls="collapseOne">
-                                                    Collection name
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collectionFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                            <div class="panel-body">
-                                                <h5 class="body-title">Collection Categories</h5>
-                                                <p>Name</p>
-                                                <p>Name</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
                                 </div>
 
-                                <div class="post-filter hidden-sm hidden-xs col-md-12 col-sm-6">
-                                    <h2>Filters</h2>
-                                    <hr class="side-separator">
-                                    <ul>
-                                        <li><a href="#">Shoes</a></li>
-                                        <li><a href="#">Hoodies & Sweatshirts</a></li>
-                                        <li><a href="#">Jackets & Gilets</a></li>
-                                        <li><a href="#">Trousers & Tights</a></li>
-                                        <li><a href="#">Shorts</a></li>
-                                        <li><a href="#">Surf & Swimwear</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="post-recent col-md-12 col-sm-6">
-                                    <h2>Recent Post</h2>
-                                    <hr class="side-separator">
-                                    <div class="recent-item">
-                                        <img src="images/thumbnails/blog/post4.jpg" width="115px" class="recent-thumbnail">
-                                        <h5><a href="#">How to Find The Right Glasses for your Face</a></h5>
-                                        <span>July 14th, 2016</span>
-                                    </div>
-                                    <div class="recent-item">
-                                        <img src="images/thumbnails/blog/post2.jpg" width="115px" class="recent-thumbnail">
-                                        <h5><a href="#">How to Find The Right Glasses for your Face</a></h5>
-                                        <span>July 14th, 2016</span>
-                                    </div>
-                                </div>
-
-                                <div class="post-filter visible-sm visible-xs col-sm-6">
-                                    <h2>Category</h2>
-                                    <hr class="side-separator">
-                                    <ul>
-                                        <li><a href="#">Shoes</a></li>
-                                        <li><a href="#">Hoodies & Sweatshirts</a></li>
-                                        <li><a href="#">Jackets & Gilets</a></li>
-                                        <li><a href="#">Trousers & Tights</a></li>
-                                        <li><a href="#">Shorts</a></li>
-                                        <li><a href="#">Surf & Swimwear</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="post-tags col-sm-6 col-md-12 ">
-                                    <h2>Popular Tags</h2>
-                                    <hr class="side-separator">
-                                    <ul>
-                                        <a href="#">Design</a>
-                                        <a href="#">Glass</a>
-                                        <a href="#">Fashion</a>
-                                        <a href="#">Minimal OOTD</a>
-                                        <a href="#">OOTD</a>
-
-                                    </ul>
-                                </div>
-
+                            </div>
                         </div>
                     </div>
-                </div>  
+                </section>
             </div>
-            
            
-               
             
             <footer class="mid-space bm-footer">
                 <div class="container">
@@ -395,6 +290,8 @@
         
         <!-- Twitter Bootstrap -->
         <script type="text/javascript" src="js/bootstrap.js"></script>
+        
+        <!-- Mobile Sidebar Menu -->
         <script type="text/javascript">
             $(document).ready(function() {   
                 var sideslider = $('[data-toggle=collapse-side]');
