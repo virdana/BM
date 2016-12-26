@@ -24,6 +24,9 @@
         <!-- Custom Style -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         
+        <!-- Custom Style -->
+        <link rel="stylesheet" type="text/css" href="plugins/owl-carousel/assets/owl.carousel.css">
+        <link rel="stylesheet" type="text/css" href="plugins/owl-carousel/assets/owl.theme.default.min.css">
         
     </head>
     <body>
@@ -201,7 +204,84 @@
 
                 </div>
             </section>
-
+            
+            <div class="sticky-event" id="eventlist">
+                <ul class="media-list owl-carousel owl-theme">
+                    
+                    <li class="media item">
+                        <div class="media-container">
+                            <div class="media-left date-event">
+                                <p class="date">05</p>
+                                <p class="month">Jul</p>
+                            </div>
+                            <div class="media-body desc-event">
+                                <h4 class="media-heading"><a href="#">Fashion Week</a></h4>
+                                <p class="place">At Summarecon Mall Summarecon Serpong</p>
+                                <p class="time"><span class="bmicon bmicon-clock"></span> 8 Am - 6 Pm </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </li>
+                    <li class="media item">
+                        <div class="media-container">
+                            <div class="media-left date-event">
+                                <p class="date">08</p>
+                                <p class="month">Jul</p>
+                            </div>
+                            <div class="media-body desc-event">
+                                <h4 class="media-heading"><a href="#">Fashion Week</a></h4>
+                                <p class="place">At Summarecon Mall Summarecon Serpong</p>
+                                <p class="time"><span class="bmicon bmicon-clock"></span> 8 Am - 6 Pm </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </li>
+                    <li class="media item">
+                        <div class="media-container">
+                            <div class="media-left date-event">
+                                <p class="date">12</p>
+                                <p class="month">Jul</p>
+                            </div>
+                            <div class="media-body desc-event">
+                                <h4 class="media-heading"><a href="#">Fashion Week</a></h4>
+                                <p class="place">At Summarecon Mall Summarecon Serpong</p>
+                                <p class="time"><span class="bmicon bmicon-clock"></span> 8 Am - 6 Pm </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </li>
+                    <li class="media item">
+                        <div class="media-container">
+                            <div class="media-left date-event">
+                                <p class="date">14</p>
+                                <p class="month">Jul</p>
+                            </div>
+                            <div class="media-body desc-event">
+                                <h4 class="media-heading"><a href="#">Fashion Week</a></h4>
+                                <p class="place">At Summarecon Mall Summarecon Serpong</p>
+                                <p class="time"><span class="bmicon bmicon-clock"></span> 8 Am - 6 Pm </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </li>
+                    <li class="media item">
+                        <div class="media-container">
+                            <div class="media-left date-event">
+                                <p class="date">17</p>
+                                <p class="month">Jul</p>
+                            </div>
+                            <div class="media-body desc-event">
+                                <h4 class="media-heading"><a href="#">Fashion Week</a></h4>
+                                <p class="place">At Summarecon Mall Summarecon Serpong</p>
+                                <p class="time"><span class="bmicon bmicon-clock"></span> 8 Am - 6 Pm </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            
             <!-- Featured -->
             <section class="large-space featured">
                 <div class="container">
@@ -370,5 +450,40 @@
         <!-- Scrollbar -->
         <script src="plugins/scrollbar/simplebar.min.js" type="text/javascript"></script>
         
+        <!-- Scroll to Fixed -->
+        <script src="plugins/scroll-to-fixed/jquery-scrolltofixed.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#eventlist').scrollToFixed({ 
+                    marginTop: 10, 
+                    limit: $('.insta .container').offset().top 
+                });
+            });
+        </script>
+        
+        <!-- OWL Carousel -->
+        <script type="text/javascript" src="plugins/owl-carousel/owl.carousel.js"></script>
+        <script>
+            $(document).ready(function() {
+                var owl = $('.owl-carousel');
+                owl.owlCarousel({
+                    items: 1,
+                    loop: true,
+                    margin: 10,
+                    autoplay: true,
+                    autoplayTimeout: 2000,
+                    autoplayHoverPause: true,
+                    dots: false
+                });
+            
+//                $('.play').on('click', function() {
+//                    owl.trigger('play.owl.autoplay', [1000])
+//                });
+//        
+//                $('.stop').on('click', function() {
+//                    owl.trigger('stop.owl.autoplay')
+//                });
+            });
+        </script>
     </body>
 </html>

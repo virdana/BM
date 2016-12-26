@@ -892,6 +892,7 @@ a.view-more:focus {
 /* - Featured - */
 .featured{
     padding-bottom: 0;
+    position: relative;
 }
 .featured-left{
     text-align: left;
@@ -1088,6 +1089,91 @@ a.view-more:focus {
     color: #000;
     background-color: transparent;
     border-color: transparent;
+}
+
+/* --- Sticky Event --- */
+.sticky-event{
+/*
+    position: absolute;
+    left: 0;
+    top: 0;
+*/
+    width: 410px;
+}
+.sticky-event .media{
+    height: auto;
+    font-family: 'Montserrat Regular', Fallback, sans-serif;
+    margin-top: 0;
+    cursor: pointer;
+    float: none;
+    display: block;
+}
+.sticky-event .media-container{
+    margin-top: 10px;
+}
+.sticky-event .media:not(:first-child) .media-container{
+    -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.36);
+    box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.36);
+}
+.sticky-event .media:hover .date-event{
+    background: #363636;
+    color: #fff;
+}
+.sticky-event .date-event{
+    background: #f5e5d5;
+    padding: 22px;
+    color: #252525;
+    text-align: center;
+    width: 90px;
+    display: block;
+    float: left;
+}
+.date-event p{
+    margin-bottom: 0;
+}
+.date-event .date{
+    font-size: 35px;
+    line-height: 37px;
+}
+.date-event .month{
+    font-size: 20px;
+    line-height: 22px;
+}
+.sticky-event .desc-event{
+    padding: 13px 15px;
+    display: block;
+    width: 320px;
+    float: left;
+    background: #fff;
+}
+.desc-event .media-heading a{ 
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #252525;
+}
+.desc-event p{
+    margin-bottom: 0;
+}
+.desc-event .place{
+    font-size: 13px;
+    line-height: 24px;
+    color: #252525;
+}
+.desc-event .time{
+    font-size: 13px;
+    line-height: 24px;
+    color: #898989;
+}
+.bmicon.bmicon-clock{
+    background: url(../images/icons/clock.png) no-repeat;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
 
@@ -3744,7 +3830,9 @@ a.add-cart:focus {
     .newsletter{
         background-position: 70% center;
     }
-    
+    #eventlist{
+        position: relative !important;
+    }
     
     /* --- Collection ---  */
     .collection-single .panel,
@@ -4435,6 +4523,19 @@ a.add-cart:focus {
         width: 30px;
         height: 6px;
     }
+    .sticky-event{
+        margin-top: 15px;
+    }
+    .sticky-event .media{
+        width: 100%;
+    }
+    .sticky-event .date-event{
+        float: none;
+    }
+    .sticky-event .desc-event{
+        width: 100%;
+        float: none;
+    }
     
     /* --- Product --- */
     .product-banner .left-side{
@@ -4467,6 +4568,11 @@ a.add-cart:focus {
     /* --- Login --- */
     .admin-caption{
         width: auto;
+    }
+    
+    /* --- Login --- */
+    .sticky-event{
+        width: 100%;
     }
     
     /* --- Alamat Pengiriman --- */

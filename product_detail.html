@@ -410,7 +410,7 @@
                                 </div>
                                 <div class="pd-right-slider">
                                     <div class="review">
-                                        <div id="starrr-readonly" class="starrr-readonly" data-rating='3'></div>
+                                        <div id="stars-existing" class="starrr" data-rating='4'></div>
                                         <a href="#" class="btn btn-default">Read Reviews</a>
                                     </div>
                                     <p class="pd-categories">Categories</p>
@@ -978,7 +978,6 @@
                             _this = this;
 
                         this.options = $.extend({}, this.defaults, options);
-
                         this.$el = $el;
                         _ref = this.defaults;
                         for (i in _ref) {
@@ -989,9 +988,6 @@
                         }
                         this.createStars();
                         this.syncRating();
-                        if (this.options.readOnly) {
-                            return;
-                        }
                         this.$el.on('mouseover.starrr', 'i', function(e) {
                             return _this.syncRating(_this.$el.find('i').index(e.currentTarget) + 1);
                         });
@@ -1002,8 +998,6 @@
                             return _this.setRating(_this.$el.find('i').index(e.currentTarget) + 1);
                         });
                         this.$el.on('starrr:change', this.options.change);
-
-                        
                     }
 
                     Starrr.prototype.createStars = function() {
@@ -1070,10 +1064,6 @@
             $(function() {
                 return $(".starrr").starrr();
             });
-            $(function() {
-                return $('.starrr-readonly').starrr({ readOnly: true });
-            });
-              
 
             $( document ).ready(function() {
 
