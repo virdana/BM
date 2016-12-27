@@ -1708,6 +1708,14 @@ a.add-cart:focus {
 .product-detail-slider .carousel-control{
     background: transparent;
 }
+/*
+.pd-left-slider .productzoom .img-responsive{
+    cursor: url(../images/icons/magnifier-plus.png), auto;
+}
+*/
+.pd-left-slider .productzoom .zoomImg{
+    cursor: url(../images/icons/magnifier-plus.png), auto;
+}
 .pd-left-slider .share-socmed{
     text-align: center;
 }
@@ -3827,6 +3835,9 @@ a.add-cart:focus {
     #eventlist{
         position: relative !important;
     }
+    .sticky-event+div{
+        display: none !important;
+    }
     
     /* --- Collection ---  */
     .collection-single .panel,
@@ -4564,9 +4575,12 @@ a.add-cart:focus {
         width: auto;
     }
     
-    /* --- Login --- */
+    /* --- Sticky Event --- */
     .sticky-event{
         width: 100%;
+    }
+    .sticky-event .carousel{
+        display: block;
     }
     
     /* --- Alamat Pengiriman --- */
