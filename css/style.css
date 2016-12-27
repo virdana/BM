@@ -1093,11 +1093,6 @@ a.view-more:focus {
 
 /* --- Sticky Event --- */
 .sticky-event{
-/*
-    position: absolute;
-    left: 0;
-    top: 0;
-*/
     width: 410px;
 }
 .sticky-event .media{
@@ -1106,7 +1101,6 @@ a.view-more:focus {
     margin-top: 0;
     cursor: pointer;
     float: none;
-    display: block;
 }
 .sticky-event .media-container{
     margin-top: 10px;
