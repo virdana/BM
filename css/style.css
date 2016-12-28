@@ -1688,6 +1688,39 @@ a.add-cart:focus {
     background-size: cover;
     background-position: center center;
 }
+.product-nav .pagination > li:first-child > a,
+.product-nav .pagination > li:first-child > span{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.product-nav .pagination > li > a,
+.product-nav .pagination > li > span{
+    width: 38px;
+    height: 38px;
+    font-size: 19px;
+    letter-spacing: 0;
+    color: #000;
+    margin-left: 6px;
+    margin-right: 6px;
+    text-align: center;
+    border: 2px solid #ebebeb;
+    background: #fff;
+}
+.product-nav .pagination > .active > a,
+.product-nav .pagination > .active > span,
+.product-nav .pagination > .active > a:hover,
+.product-nav .pagination > .active > span:hover,
+.product-nav .pagination > .active > a:focus,
+.product-nav .pagination > .active > span:focus{
+    border: none;
+    color: #fff;
+    background: #464646;
+}
+.product-nav .pagination > li:last-child > a,
+.product-nav .pagination > li:last-child > span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
 
 
 /* --- Product Detail --- */
@@ -3497,37 +3530,6 @@ a.add-cart:focus {
     }
     .product-related li{
         margin-top: 10px;
-    }
-    .product-nav .pagination > li:first-child > a,
-    .product-nav .pagination > li:first-child > span{
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-    .product-nav .pagination > li > a,
-    .product-nav .pagination > li > span{
-        width: 38px;
-        height: 38px;
-        font-size: 19px;
-        letter-spacing: 0;
-        color: #000;
-        margin-left: 6px;
-        margin-right: 6px;
-        text-align: center;
-        border: 2px solid #ebebeb;
-    }
-    .product-nav .pagination > .active > a,
-    .product-nav .pagination > .active > span,
-    .product-nav .pagination > .active > a:hover,
-    .product-nav .pagination > .active > span:hover,
-    .product-nav .pagination > .active > a:focus,
-    .product-nav .pagination > .active > span:focus{
-        border: none;
-        background: #ebebeb;
-    }
-    .product-nav .pagination > li:last-child > a,
-    .product-nav .pagination > li:last-child > span {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
     }
         
     /* --- Product Detail --- */
