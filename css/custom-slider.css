@@ -142,11 +142,8 @@
     width: 100px;
     margin-bottom: 15px;
 }
-.small-thumbnail.active,
-.small-thumbnail:active,
-.small-thumbnail:visited,
-.small-thumbnail:focus{
-/*    border: 1px solid #ccc;*/
+.small-thumbnail.active{
+    border: 1px solid #ccc;
 }
 .small-thumbnail img.bordered{
     border: 1px solid #ccc;

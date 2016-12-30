@@ -25,7 +25,7 @@ $(document).ready(function () {
         var dataDisplay = parseInt($(this).attr("data-display"));
         var setId   = "#"+dataDisplay+'.slider-item';
         $('.small-thumbnail img').removeClass('bordered');
-        console.log($('.small-thumbnail').find("[data-display='" + dataDisplay + "']").addClass('bordered'));
+        $('.small-thumbnail').find("[data-display='" + dataDisplay + "']").addClass('bordered');
         $('.single-container .slider-item').removeClass('active');
         $('.small-thumbnail').removeClass('active');
         $(setId).addClass('active');
