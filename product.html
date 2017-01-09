@@ -21,7 +21,7 @@
         
         <!-- Price Slider -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
+<!--        <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">-->
         
         <!-- Scrollbar -->
         <link rel="stylesheet" type="text/css" href="plugins/scrollbar/simplebar.css">
@@ -229,14 +229,14 @@
                                     </div>
                                     
                                     <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
+                                        <div class="panel-heading" role="tab" id="headingFour">
                                             <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionThree" aria-expanded="true" aria-controls="collapseOne">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionFour" aria-expanded="true" aria-controls="collapseOne">
                                                     Collection name
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="collectionThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div id="collectionFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                                             <div class="panel-body">
                                                 <h5 class="body-title">Collection Categories</h5>
                                                 <p>Name</p>
@@ -246,14 +246,14 @@
                                     </div>
                                     
                                     <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
+                                        <div class="panel-heading" role="tab" id="headingFive">
                                             <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionThree" aria-expanded="true" aria-controls="collapseOne">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionFive" aria-expanded="true" aria-controls="collapseOne">
                                                     Collection name
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="collectionThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div id="collectionFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                                             <div class="panel-body">
                                                 <h5 class="body-title">Collection Categories</h5>
                                                 <p>Name</p>
@@ -263,14 +263,14 @@
                                     </div>
                                     
                                     <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
+                                        <div class="panel-heading" role="tab" id="headingSix">
                                             <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionThree" aria-expanded="true" aria-controls="collapseOne">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionSix" aria-expanded="true" aria-controls="collapseOne">
                                                     Collection name
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="collectionThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div id="collectionSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
                                             <div class="panel-body">
                                                 <h5 class="body-title">Collection Categories</h5>
                                                 <p>Name</p>
@@ -280,14 +280,14 @@
                                     </div>
                                     
                                     <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
+                                        <div class="panel-heading" role="tab" id="headingSeven">
                                             <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionThree" aria-expanded="true" aria-controls="collapseOne">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collectionSeven" aria-expanded="true" aria-controls="collapseOne">
                                                     Collection name
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="collectionThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div id="collectionSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
                                             <div class="panel-body">
                                                 <h5 class="body-title">Collection Categories</h5>
                                                 <p>Name</p>
@@ -301,12 +301,56 @@
                             
                             <div class="filters">
                                 <h3 class="visible-md visible-lg">Filters</h3>
+<!--
                                 <div class="form-group filter-collection">
                                     <select name="collection" class="form-control visible-xs visible-sm">
                                         <option value="">Collection</option>
                                         <option value="0">Collection 1</option>
                                         <option value="1">Collection 2</option>
                                     </select>                    
+                                </div>
+-->
+                                <!-- Filter button -->
+                                <div class="btn-group filter-collection visible-xs visible-sm">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="buttonfilter">
+                                        <span class="filtertext">Collection</span> <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" id="filterproduct">
+                                        <li class="filter-header">Collection 1</li>
+                                        <li><a href="#buttonfilter" class="filter-subheader">Collection Categories</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="filter-header">Collection name</li>
+                                        <li><a href="#buttonfilter" class="filter-subheader">Collection Categories</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="filter-header">Collection name</li>
+                                        <li><a href="#buttonfilter" class="filter-subheader">Collection Categories</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="filter-header">Collection name</li>
+                                        <li><a href="#buttonfilter" class="filter-subheader">Collection Categories</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="filter-header">Collection name</li>
+                                        <li><a href="#buttonfilter" class="filter-subheader">Collection Categories</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="filter-header">Collection name</li>
+                                        <li><a href="#buttonfilter" class="filter-subheader">Collection Categories</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="filter-header">Collection name</li>
+                                        <li><a href="#buttonfilter" class="filter-subheader">Collection Categories</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                        <li><a href="#buttonfilter">Name</a></li>
+                                    </ul>
                                 </div>
                                 <hr class="side-separator visible-md visible-lg">
                                 <div class="filter-tool">
@@ -698,6 +742,13 @@
         
         <!-- Scrollbar -->
         <script src="plugins/scrollbar/simplebar.min.js" type="text/javascript"></script>
+        
+        <!-- Scrollbar -->
+        <script type="text/javascript">
+            $('#filterproduct li a').on('click', function(){
+                $(".filtertext").text($(this).text());
+            });
+        </script>
         
     </body>
 </html>

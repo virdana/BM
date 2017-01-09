@@ -3487,18 +3487,65 @@ a.add-cart:focus {
         position: relative;
         padding-top: 10px;
     }
-    .filter-collection .form-control{
-        font-weight: 900;
+    .filter-collection .btn,
+    .filter-collection .dropdown-menu{
+        border-radius: 0;
+    }
+    .filter-collection .btn-default:focus,
+    .filter-collection .btn-default:hover{
+        background-color: #fff;
+        border-color: #adadad;
+    }
+    .filter-collection.open > .dropdown-toggle.btn-default,
+    .filter-collection .btn-default:active:hover,
+    .filter-collection .btn-default.active:hover,
+    .filter-collection.open > .dropdown-toggle.btn-default:hover,
+    .filter-collection .btn-default:active:focus,
+    .filter-collection .btn-default.active:focus,
+    .filter-collection.open > .dropdown-toggle.btn-default:focus,
+    .filter-collection .btn-default:active.focus,
+    .filter-collection .btn-default.active.focus,
+    .filter-collection .open > .dropdown-toggle.btn-default.focus{
+        background-color: #fff;
+    }
+    .filter-collection.btn-group.open .dropdown-toggle{
+        box-shadow: none;
+    }
+    .filter-collection li a{
+        font-family: 'Montserrat Regular', Fallback, sans-serif;
+/*
         font-size: 16px;
+        font-weight: 900;
         line-height: 20px;
         letter-spacing: 0;
+*/
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0;
         color: #555;
-        background: url(../images/icons/fill-down-arrow.png) no-repeat;
-        background-position: 90% center;
-        background-size: 13px 11px;
         height: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        opacity: 0.8;
+    }
+    .filter-collection .dropdown-menu > li{
+        padding: 10px 20px;
+    }
+    .filter-collection .dropdown-menu > li.divider,
+    .filter-collection .dropdown-menu > li > a{
+        padding: 0;
+    }
+    .filter-collection .dropdown-menu > li:hover,
+    .filter-collection .dropdown-menu > li:focus {
+        color: #262626;
+        text-decoration: none;
+        background-color: #f5f5f5;
+    }
+    .filter-collection li .filter-header{
+        font-weight: 900;
+        opacity: 1;
+    }
+    .filter-collection li .filter-subheader{
+        font-weight: 400;
+        opacity: 1;
     }
     .filter-title .ft-left{
         float: none;
@@ -4211,6 +4258,9 @@ a.add-cart:focus {
         width: 72%;
         padding-left: 0;
     }
+    .filter-collection{
+        margin-bottom: 15px;
+    }
     
     /* --- Bank Transfer --- */
     .admin-steps li.steps-person{
@@ -4423,6 +4473,9 @@ a.add-cart:focus {
     .filters .filter-tool{
         float: none;
         padding-left: 0;
+    }
+    .single-container{
+        margin-top: 0;
     }
     
     /* --- Product Detail --- */

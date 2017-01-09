@@ -96,9 +96,21 @@ Style for Blog Page
 .sidebar .recent-item{
     margin:0 0 40px 0;
 }
-.sidebar .post-recent .recent-thumbnail{
+.sidebar .recent-item .item-img{
+    width: 115px;
     float: left;
     margin:0 20px 0 0;
+    overflow: hidden;
+}
+.sidebar .recent-item .dock-img{
+    width: 100%;
+    height: auto;
+    margin:0 20px 0 0;
+    overflow: hidden;
+}
+.sidebar .post-recent .recent-thumbnail{
+    width: 100%;
+    height: auto;
 }
 .sidebar .post-recent h5 a{
     line-height: 20px;
