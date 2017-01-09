@@ -3936,6 +3936,9 @@ a.add-cart:focus {
         text-align: center;
         border-right: 0;
     }
+    .pd-right-slider{
+        width: 100%;
+    }
     
     /* --- About --- */
     .about{
